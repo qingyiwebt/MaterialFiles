@@ -15,6 +15,12 @@
             android:key="@string/pref_key_locale"
             android:title="@string/settings_locale_title" />
 
+        <me.zhanghai.android.files.settings.NonNegativeIntegerPreference
+            android:key="@string/pref_key_dpi"
+            android:title="@string/settings_dpi"
+            android:defaultValue="@integer/pref_default_value_dpi"
+            app:useSimpleSummaryProvider="true" />
+
         <me.zhanghai.android.files.theme.custom.ThemeColorPreference
             android:key="@string/pref_key_theme_color"
             android:title="@string/settings_theme_color_title"
