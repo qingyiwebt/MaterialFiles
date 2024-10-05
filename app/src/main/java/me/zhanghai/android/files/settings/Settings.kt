@@ -66,6 +66,9 @@ object Settings {
     val CREATE_ARCHIVE_TYPE: SettingLiveData<Int> =
         ResourceIdSettingLiveData(R.string.pref_key_create_archive_type, R.id.zipRadio)
 
+    val DPI: SettingLiveData<Int> =
+        IntegerSettingLiveData(R.string.pref_key_dpi, R.integer.pref_default_value_dpi)
+
     val FTP_SERVER_ANONYMOUS_LOGIN: SettingLiveData<Boolean> =
         BooleanSettingLiveData(
             R.string.pref_key_ftp_server_anonymous_login,

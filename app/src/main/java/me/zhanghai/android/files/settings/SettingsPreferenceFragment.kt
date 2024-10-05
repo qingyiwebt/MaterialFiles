@@ -46,6 +46,7 @@ class SettingsPreferenceFragment : PreferenceFragmentCompat() {
         Settings.MATERIAL_DESIGN_3.observe(viewLifecycleOwner, this::onMaterialDesign3Changed)
         Settings.NIGHT_MODE.observe(viewLifecycleOwner, this::onNightModeChanged)
         Settings.BLACK_NIGHT_MODE.observe(viewLifecycleOwner, this::onBlackNightModeChanged)
+        Settings.DPI.observe(viewLifecycleOwner, this::onDpiChanged)
     }
 
     private fun onThemeColorChanged(themeColor: ThemeColor) {
@@ -61,6 +62,10 @@ class SettingsPreferenceFragment : PreferenceFragmentCompat() {
     }
 
     private fun onBlackNightModeChanged(blackNightMode: Boolean) {
+        CustomThemeHelper.sync()
+    }
+
+    private fun onDpiChanged(blackNightMode: Int) {
         CustomThemeHelper.sync()
     }
 
